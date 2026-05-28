@@ -1,5 +1,39 @@
 body {
+  margin: 0;
+  height: 100vh;
+  background-color: #000000; 
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: 0 0;
+  animation: sparkleBackground 1.5s infinite alternate ease-in-out;
 }
+
+@keyframes sparkleBackground {
+  0% {
+    background-image: radial-gradient(
+      circle at 8px 8px, 
+      #0000ff 0px, 
+      #0000ff 1px, 
+      #000000 2px
+    );
+  }
+  50% {
+    background-image: radial-gradient(
+      circle at 8px 8px, 
+      #ffffff 0px, 
+      #0077ff 2px, 
+      #0000ff 5px, 
+      #000000 7px    
+    );
+  }
+  100% {
+    background-image: radial-gradient(
+      circle at 8px 8px, 
+      #000000 100%
+    );
+  }
+}
+
 .pixel-game {
   /* Disables blurry anti-aliasing and forces crisp pixel scaling */
   image-rendering: -moz-crisp-edges; /* Firefox fallback */
