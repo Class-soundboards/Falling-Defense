@@ -104,7 +104,7 @@ body::before {
      1px  1px 0 #000;
 }
 
-.main-content {
+#main-content {
   position: relative;
   margin-left: 270px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -118,10 +118,14 @@ body::before {
   z-index: 10;
 }
 
-.link-text a:link {
+#link-text {
+  margin-left: 270px;
+}
+
+#link-text a:link {
   color: red;
 }
 
-.link-text a:visited {
+#link-text a:visited {
   color: purple;
 }
