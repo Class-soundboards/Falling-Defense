@@ -117,12 +117,11 @@ body::before {
      1px  1px 0 #000;
   z-index: 10;
 }
-.link-text {
-  a:link {
+
+.link-text a:link {
   color: red;
 }
-  a:visited {
+
+.link-text a:visited {
   color: purple;
-}
-  position: absolute;
 }
