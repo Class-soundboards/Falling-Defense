@@ -124,4 +124,5 @@ body::before {
   a:visited {
   color: purple;
 }
+  position: absolute;
 }
