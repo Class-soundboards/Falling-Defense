@@ -1,36 +1,39 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: #000000; 
-  background-size: 16px 16px;
-  background-repeat: repeat;
-  background-position: 0 0;
-  animation: sparkleBackground 1.5s infinite alternate ease-in-out;
+  position: relative;
+  background-color: #000000;
 }
 
-@keyframes sparkleBackground {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -9999;
+  pointer-events: none;
+  background-color: #000000;
+  background-image: radial-gradient(
+    circle at center, 
+    #0000ff 0px, 
+    #0000ff 2px, 
+    #000000 3px
+  );
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  animation: sparkleFlash 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes sparkleFlash {
   0% {
-    background-image: radial-gradient(
-      circle at 8px 8px, 
-      #0000ff 0px, 
-      #0000ff 1px, 
-      #000000 2px
-    );
-  }
-  50% {
-    background-image: radial-gradient(
-      circle at 8px 8px, 
-      #ffffff 0px, 
-      #0077ff 2px, 
-      #0000ff 5px, 
-      #000000 7px    
-    );
+    opacity: 0.3;
+    transform: scale(1);
   }
   100% {
-    background-image: radial-gradient(
-      circle at 8px 8px, 
-      #000000 100%
-    );
+    opacity: 1;
+    transform: scale(1.05);
   }
 }
 
